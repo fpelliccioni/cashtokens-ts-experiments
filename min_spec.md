@@ -388,9 +388,6 @@ Note: because coinbase transactions have only one input with an outpoint index
 of `4294967295`, coinbase transactions can never include a token prefix in any
 output.
 
-See [Implementations](#implementations) for examples of this algorithm in
-multiple programming languages.
-
 ### Fungible Token Supply Definitions
 
 Several measurements of fungible token supply are standardized for wider
