@@ -1,3 +1,3 @@
-import { getMessage } from './utils';
+// import { getMessage } from './cashtokens';
 
-console.log(getMessage());
+// console.log(getMessage());

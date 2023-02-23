@@ -1,15 +1,15 @@
 {
-  "name": "node-typescript-jest-boilerplate",
+  "name": "cashtokens-ts-experiments",
   "version": "0.0.1",
-  "description": "NodeJS typescript + jest boilerplate",
+  "description": "BCH CashTokens Experimetns in TypeScript",
   "keywords": [
     "boilerplate",
     "typescript",
     "jest"
   ],
-  "author": "Brian Schlenker <bschlenk@umich.edu>",
+  "author": "Brian Schlenker <fpelliccioni@gmail.com>",
   "license": "MIT",
-  "repository": "bschlenk/node-typescript-jest-boilerplate",
+  "repository": "fpelliccioni/cashtokens-ts-experiments",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -29,22 +29,22 @@
     "prepublishOnly": "npm run test && npm run build"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@types/jest": "^26.0.23",
-    "@types/node": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@typescript-eslint/parser": "^4.28.1",
-    "eslint": "^7.30.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "husky": "^7.0.0",
-    "jest": "^27.0.6",
-    "lint-staged": "^11.0.0",
-    "nodemon": "^2.0.9",
-    "prettier": "^2.3.2",
-    "ts-jest": "^27.0.3",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.5"
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "jest": "^29.4.3",
+    "lint-staged": "^13.1.2",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   }
 }
