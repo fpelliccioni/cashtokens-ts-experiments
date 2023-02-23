@@ -50,8 +50,7 @@ token `commitment`, and fungible token `amount`.
 ## Technical Specification
 
 Token primitives are defined, token encoding is specified. Transaction
-validation and transaction signing serialization is modified to support tokens,
-`SIGHASH_UTXOS` is specified.
+validation and transaction signing serialization is modified to support tokens.
 
 ### Token Categories
 
@@ -391,38 +390,6 @@ output.
 
 See [Implementations](#implementations) for examples of this algorithm in
 multiple programming languages.
-
-### Signing Serialization of Tokens
-
-The
-[signing serialization algorithm](https://github.com/bitcoincashorg/bitcoincash.org/blob/3e2e6da8c38dab7ba12149d327bc4b259aaad684/spec/replay-protected-sighash.md)
-(A.K.A `SIGHASH` algorithm) is enhanced to support tokens: when evaluating a
-UTXO that includes tokens, the full, [encoded token prefix](#token-encoding)
-(including `PREFIX_TOKEN`) must be included immediately before the
-`coveredBytecode` (A.K.A. `scriptCode`). Note: this behavior applies for all
-signing serialization types in the evaluation; it does not require a signing
-serialization type/flag.
-
-### `SIGHASH_UTXOS`
-
-A new signing serialization type, `SIGHASH_UTXOS`, is defined at `0x20`
-(`32`/`0b100000`). When `SIGHASH_UTXOS` is enabled, `hashUtxos` is inserted in
-the
-[signing serialization algorithm](https://github.com/bitcoincashorg/bitcoincash.org/blob/3e2e6da8c38dab7ba12149d327bc4b259aaad684/spec/replay-protected-sighash.md)
-immediately following `hashPrevouts`. `hashUtxos` is a 32-byte double SHA256 of
-the serialization of all UTXOs spent by the transaction's inputs, concatenated
-in input order, excluding output count. (Note: this serialization is equivalent
-to the segment of a P2P transaction message beginning after `output count` and
-ending before `locktime` if the UTXOs were serialized in order as the
-transaction's outputs.)
-
-The `SIGHASH_UTXOS` and `SIGHASH_ANYONECANPAY` types must not be used together;
-if a signature in which both flags are enabled is encountered during VM
-evaluation, an error is emitted (evaluation fails).
-
-The `SIGHASH_UTXOS` type must be used with the `SIGHASH_FORKID` type; if a
-signature is encountered during VM evaluation with the `SIGHASH_UTXOS` flag and
-without the `SIGHASH_FORKID` flag, an error is emitted (evaluation fails).
 
 ### Fungible Token Supply Definitions
 
