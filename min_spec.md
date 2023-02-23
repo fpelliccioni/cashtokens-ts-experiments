@@ -1,33 +1,5 @@
 # CHIP-2022-02-CashTokens: Token Primitives for Bitcoin Cash
 
-        Title: Token Primitives for Bitcoin Cash
-        Type: Standards
-        Layer: Consensus
-        Maintainer: Jason Dreyzehner
-        Status: Draft
-        Initial Publication Date: 2022-02-22
-        Latest Revision Date: 2022-9-30
-        Latest Version: 2.2.0 (e02012a2)
-
-<summary><strong>Table of Contents</strong></summary>
-
-- [Summary](#summary)
-- [Deployment](#deployment)
-- [Motivation](#motivation)
-- [Benefits](#benefits)
-- [Technical Summary](#technical-summary)
-- [Technical Specification](#technical-specification)
-- [Usage Examples](#usage-examples)
-- [Rationale](#rationale)
-- [Prior Art & Alternatives](#prior-art--alternatives)
-- [Stakeholders & Statements](#stakeholders--statements)
-- [Test Vectors](#test-vectors)
-- [Implementations](#implementations)
-- [Feedback & Reviews](#feedback--reviews)
-- [Acknowledgements](#acknowledgements)
-- [Changelog](#changelog)
-- [Copyright](#copyright)
-
 ## Summary
 
 This proposal enables two new primitives on Bitcoin Cash: **fungible tokens**
